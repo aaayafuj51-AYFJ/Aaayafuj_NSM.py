@@ -1,0 +1,12 @@
+{
+    "app": {
+        "version": "2.0.0",
+        "author": "Aaayafuj"
+    },
+    "nmap": {
+        "flags": ["-A", "-T4"]
+    },
+    "sqlmap": {
+        "flags": ["--batch", "--random-agent"]
+    }
+}

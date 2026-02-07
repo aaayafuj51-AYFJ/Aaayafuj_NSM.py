@@ -1,0 +1,5 @@
+{
+  "name": "Aaayafuj_NSM CLI Suite",
+  "description": "A pure Python-based CLI tool for network security, scanning, and OSINT gathering. Designed for terminal use only.",
+  "requestFramePermissions": []
+}
