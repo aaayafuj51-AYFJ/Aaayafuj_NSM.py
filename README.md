@@ -1,39 +1,38 @@
-# AaayafujNSM Modular CLI Suite
+# Aaayafuj_NSM.py CLI Suite
 
-```text
-     /.\                                        .|';                    '||\   ||` .|'''|  '||\   /||` 
-    // \\                                       ||               ''      ||\\  ||  ||       ||\\.//||  
-   //...\\     '''|.   '''|.  '||  ||`  '''|.  '||'  '||  ||`    || ---  || \\ ||  `|'''|,  ||     ||  
-  //     \\   .|''||  .|''||   `|..||  .|''||   ||    ||  ||     ||      ||  \\||   .   ||  ||     ||  
-.//       \\. `|..||. `|..||.      ||  `|..||. .||.   `|..'|.    ||     .||   \||.  |...|' .||     ||. 
-                                ,  |'                            ||                                    
-                                 ''                           `..|'                                  
-```
+A professional-grade Python-only CLI tool for security auditing and information gathering.
 
-## Overview
-AaayafujNSM is a professional-grade, modular security toolkit developed in Python. It consolidates industry-standard security tools into a single, intuitive command-line interface. 
+## Features
+- **Nmap**: Advanced network scanning with pre-configured templates.
+- **SQLMap**: Automated SQL injection vulnerability testing.
+- **Metasploit**: Rapid search of the Exploit Database.
+- **Lookup**: DNS and WHOIS intelligence.
+- **OSINT**: Geolocation and network data gathering by URL/IP.
 
 ## Installation
 
-### 1. Installation via GitHub
+### GitHub Installation (Kali/Debian/Ubuntu)
 ```bash
 git clone https://github.com/aaayafuj51-AYFJ/Aaayafuj_SMM.py.git
 cd Aaayafuj_SMM.py
 sudo bash scripts/install_tools.sh
-python3 AaayafujNSM.py
 ```
 
-### 2. Windows Installation
-1. Install [Python 3.x](https://www.python.org/).
-2. Run `AaayafujNSM.bat`.
+## Usage
+
+### Run via Python
+```bash
+python3 Aaayafuj_NSM.py
+```
+
+### Run via Bash
+```bash
+chmod +x Aaayafuj_NSM.sh
+./Aaayafuj_NSM.sh
+```
 
 ## Troubleshooting
-**Error: "Rust toolchain not found" or "pydantic-core failed"**
-This happens when `pip` tries to compile a package from source because it can't find a compatible binary (wheel).
-- **Fix:** The updated `install_tools.sh` handles this by upgrading `pip`, `setuptools`, and `wheel` before installing other dependencies. If manual fix is needed:
-  ```bash
-  python3 -m pip install --upgrade pip setuptools wheel
-  ```
+If you encounter errors regarding `Rust` or `pydantic-core`, the provided `install_tools.sh` handles this by upgrading `pip`, `setuptools`, and `wheel` to ensure binary packages are used instead of source builds.
 
 ## Disclaimer
-**AaayafujNSM is intended for authorized security testing and educational purposes only.** The developers assume no liability for misuse.
+Authorized use only. Educational and professional security auditing purposes.
