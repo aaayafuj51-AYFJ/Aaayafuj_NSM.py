@@ -1,13 +1,32 @@
 #!/usr/bin/env python3
-# Wrapper for AaayafujNSM.py
-import os
+"""
+Aaayafuj_NSM CLI Suite
+Primary entry point for the modular security toolkit.
+"""
 import sys
+import os
+
+# Ensure current directory is in search path for modular imports
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+try:
+    from menu import main_menu
+    from utils import setup_logging, color_print
+except ImportError as e:
+    print(f"\033[91m[!] Critical Import Error: {e}\033[0m")
+    print("[*] Please ensure all module files (menu.py, utils.py, etc.) are in the same directory.")
+    sys.exit(1)
+
+def main():
+    setup_logging()
+    try:
+        main_menu()
+    except KeyboardInterrupt:
+        print("\n\n\033[93m[!] Session interrupted by user. Exiting...\033[0m")
+        sys.exit(0)
+    except Exception as e:
+        print(f"\n\n\033[91m[!] A critical error occurred: {e}\033[0m")
+        sys.exit(1)
 
 if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    target_script = os.path.join(current_dir, "AaayafujNSM.py")
-    
-    if os.path.exists(target_script):
-        os.execv(sys.executable, [sys.executable, target_script] + sys.argv[1:])
-    else:
-        print("[!] AaayafujNSM.py not found in the current directory.")
+    main()

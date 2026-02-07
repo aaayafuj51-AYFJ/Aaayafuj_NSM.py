@@ -1,21 +1,11 @@
-import sys
+#!/usr/bin/env python3
 import os
-from menu import main_menu
-from utils import setup_logging
-
-def main():
-    # Ensure current directory is in search path for modular imports
-    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-    
-    setup_logging()
-    try:
-        main_menu()
-    except KeyboardInterrupt:
-        print("\n[!] Shutdown requested by user. Goodbye.")
-        sys.exit(0)
-    except Exception as e:
-        print(f"\n[!] Critical System Error: {e}")
-        sys.exit(1)
+import sys
 
 if __name__ == "__main__":
-    main()
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    target = os.path.join(current_dir, "Aaayafuj_NSM.py")
+    if os.path.exists(target):
+        os.execv(sys.executable, [sys.executable, target] + sys.argv[1:])
+    else:
+        print("[!] Aaayafuj_NSM.py not found.")

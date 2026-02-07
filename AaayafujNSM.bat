@@ -1,5 +1,5 @@
 @echo off
-title AaayafujNSM CLI Suite
+title Aaayafuj_NSM Security Suite
 setlocal
 
 :: Check for Python installation
@@ -11,8 +11,8 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
-echo [*] Starting AaayafujNSM CLI...
-python AaayafujNSM.py
+echo [*] Starting Aaayafuj_NSM CLI...
+python Aaayafuj_NSM.py
 
 if %errorlevel% neq 0 (
     echo.
